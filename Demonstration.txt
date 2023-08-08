@@ -1,1 +1,2 @@
 New text line added
+New Feature line added using GitBash
