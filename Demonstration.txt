@@ -1,5 +1,4 @@
 New text line added
 line deleted
 New line added in development branch
-new instance created
-new commit in the branched line
+New instance Created
