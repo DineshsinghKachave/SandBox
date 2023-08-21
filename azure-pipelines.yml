@@ -19,14 +19,7 @@ steps:
     git config --global user.email "dineshsinghrkachave@gmail.com"
     git config --global user.name "DineshsinghKachave"
     git clone https://github.com/DineshsinghKachave/SandBox.git github
-    cd github
-    git remote add azure https://dev.azure.com/dineshsinghrkachave/SampleForToday/_git/SandBox.git
-    git fetch azure
-    git merge azure/main --no-edit
+    cd SandBox
+    git pull origin main
     git push origin main
   displayName: 'Sync Changes to GitHub'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
