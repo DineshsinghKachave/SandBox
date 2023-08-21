@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+      - Master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, World!
+  displayName: 'Print Hello, World!'
+
+- script: |
+    git config --global user.email "dineshsinghrkachave@gmail.com"
+    git config --global user.name "DineshsinghKachave"
+    git clone git@github.com:DineshsinghKachave/SandBox.git
+    cd SandBox
+    git checkout Master 
+    git pull origin Master
+    # Make some changes to the repository here (if needed)
+    git commit -a -m "Auto Sync changes" 
+    git push origin main
+    git push git@ssh.dev.azure.com:v3/dineshsinghrkachave/SampleForToday/SandBox.git main
+  displayName: 'Auto Sync Git Repository'
