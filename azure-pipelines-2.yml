@@ -11,12 +11,12 @@ steps:
 - script: |
     git config --global user.email "dineshsinghrkachave@gmail.com"
     git config --global user.name "DineshsinghKachave"
-    git clone https://github.com/DineshsinghKachave/SandBox.git
+    git clone https://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@github.com/DineshsinghKachave/SandBox.git
     cd SandBox
     git checkout master
     git pull origin master
     git checkout -b main  # Create a new local main branch
     git push origin main  # Push the new main branch to GitHub
-    git remote add azure https://dev.azure.com/dineshsinghrkachave/SampleForToday/_git/SandBox
+    git remote add azure https://neho27ewdzouab4ozg6fjbjxlwu5es5x2oa753u7aj5eqj6mxioq@dev.azure.com/dineshsinghrkachave/SampleForToday/_git/SandBox
     git push azure main  # Push the new main branch to Azure Repos
   displayName: 'Sync GitHub to Azure Repos'
