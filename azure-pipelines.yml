@@ -25,3 +25,8 @@ steps:
     git merge azure/main --no-edit
     git push origin main
   displayName: 'Sync Changes to GitHub'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
