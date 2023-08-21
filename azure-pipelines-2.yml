@@ -15,6 +15,8 @@ steps:
     cd SandBox
     git checkout master
     git pull origin master
+    git checkout -b main  # Create a new local main branch
+    git push origin main  # Push the new main branch to GitHub
     git remote add azure https://dev.azure.com/dineshsinghrkachave/SampleForToday/_git/SandBox
-    git push azure main
+    git push azure main  # Push the new main branch to Azure Repos
   displayName: 'Sync GitHub to Azure Repos'
