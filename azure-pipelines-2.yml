@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    steps:
+- script: |
+    git config --global user.email "dineshsinghrkachave@gmail.com"
+    git config --global user.name "DineshsinghKachave"
+    git clone git@github.com:DineshsinghKachave/SandBox.git
+    cd SandBox
+    git checkout master  # Use lowercase branch name here
+    git pull origin master
+    git push git@ssh.dev.azure.com:v3/dineshsinghrkachave/SampleForToday/SandBox.git main
+  displayName: 'Sync GitHub to Azure Repos'
