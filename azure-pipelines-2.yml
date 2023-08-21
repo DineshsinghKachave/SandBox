@@ -11,12 +11,12 @@ steps:
 - script: |
     git config --global user.email "dineshsinghrkachave@gmail.com"
     git config --global user.name "DineshsinghKachave"
-    git clone https://github.com/DineshsinghKachave/MyRepo-GitHub.git
-    cd MyRepo-GitHub
+    git clone https://github.com/DineshsinghKachave/SandBox.git
+    cd SandBox
     git checkout master
     git pull origin master
     git checkout -b main
-    git push https://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@github.com/DineshsinghKachave/MyRepo-GitHub.git main
-    git remote add azure https://dev.azure.com/dineshsinghrkachave/SampleForToday/_git/MyRepo-Azure
-    git push https://neho27ewdzouab4ozg6fjbjxlwu5es5x2oa753u7aj5eqj6mxioq@dev.azure.com/dineshsinghrkachave/SampleForToday/_git/MyRepo-Azure main
+    git push https://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@github.com/DineshsinghKachave/SandBox.git main
+    git remote add azure https://dev.azure.com/dineshsinghrkachave/SampleForToday/_git/SandBox
+    git push https://neho27ewdzouab4ozg6fjbjxlwu5es5x2oa753u7aj5eqj6mxioq@dev.azure.com/dineshsinghrkachave/SampleForToday/_git/SandBox main
   displayName: 'Sync GitHub to Azure Repos'
