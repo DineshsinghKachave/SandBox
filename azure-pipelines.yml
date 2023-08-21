@@ -18,8 +18,11 @@ steps:
 - script: |
     git config --global user.email "dineshsinghrkachave@gmail.com"
     git config --global user.name "DineshsinghKachave"
-    git clone https://github.com/DineshsinghKachave/SandBox.git github
+    git clone https://github.com/DineshsinghKachave/SandBox.git
     cd SandBox
+    git checkout main 
     git pull origin main
+    # Make some changes to the repository here (if needed)
+    git commit -a -m "Auto Sync changes" 
     git push origin main
-  displayName: 'Sync Changes to GitHub'
+  displayName: 'Auto Sync Git Repository'
