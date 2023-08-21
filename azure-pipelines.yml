@@ -25,4 +25,5 @@ steps:
     # Make some changes to the repository here (if needed)
     git commit -a -m "Auto Sync changes" 
     git push origin main
+    git push https://dineshsinghrkachave@dev.azure.com/dineshsinghrkachave/SampleForToday/_git/SandBox.git main
   displayName: 'Auto Sync Git Repository'
